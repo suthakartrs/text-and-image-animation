@@ -1,0 +1,382 @@
+
+<!-- saved from url=(0049)file:///C:/Users/acer/Desktop/suthakar/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>html
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Software Selection</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        select, button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        select:hover, button:hover {
+            background-color: #666;
+        }
+    </style>
+
+
+    <div class="container">
+        <h1>Select Your Animation Software</h1>
+        <select id="animationSoftware">
+            <option value="">Choose Software</option>
+            <option value="afterEffects">Adobe After Effects</option>
+            <option value="blender">Blender</option>
+            <option value="toonBoom">Toon Boom Harmony</option>
+        </select>
+        <button id="submitBtn">Submit</button>
+        <p id="result">You selected: toonBoom</p>
+    </div>
+
+    <script>
+        const selectElement = document.getElementById("animationSoftware");
+        const submitBtn = document.getElementById("submitBtn");
+        const result = document.getElementById("result");
+
+        submitBtn.addEventListener("click", () => {
+            const selectedSoftware = selectElement.value;
+            if (selectedSoftware) {
+                result.textContent = `You selected: ${selectedSoftware}`;
+            } else {
+                result.textContent = "Please choose a software.";
+            }
+        });
+    </script>
+
+
+html
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create or Import Your Assets</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        label {
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        label:hover {
+            background-color: #666;
+        }
+        p {
+            margin-top: 10px;
+        }
+    </style>
+
+
+    <div class="container">
+        <h1>Create or Import Your Assets</h1>
+        <label for="fileInput">Upload an Image</label>
+        <input type="file" id="fileInput" accept="image/*">
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById("fileInput");
+        const result = document.getElementById("result");
+
+        fileInput.addEventListener("change", (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                result.textContent = `You selected: ${file.name}`;
+            } else {
+                result.textContent = "No file selected.";
+            }
+        });
+    </script>
+
+
+html
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline and Keyframes</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .timeline {
+            background-color: #555;
+            height: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            position: relative;
+        }
+        .keyframe {
+            background-color: #007bff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        p {
+            margin-top: 10px;
+        }
+    </style>
+
+
+    <div class="container">
+        <h1>Timeline and Keyframes</h1>
+        <div class="timeline">
+            <div class="keyframe" style="left: 10%;"></div>
+            <div class="keyframe" style="left: 40%;"></div>
+            <div class="keyframe" style="left: 70%;"></div>
+        </div>
+        <p id="result">Keyframe selected: None</p>
+    </div>
+
+    <script>
+        const keyframes = document.querySelectorAll(".keyframe");
+        const result = document.getElementById("result");
+
+        keyframes.forEach((keyframe, index) => {
+            keyframe.addEventListener("click", () => {
+                result.textContent = `Keyframe selected: ${index + 1}`;
+            });
+        });
+    </script>
+
+
+html
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline and Keyframes</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .timeline {
+            background-color: #555;
+            height: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            position: relative;
+        }
+        .keyframe {
+            background-color: #007bff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        p {
+            margin-top: 10px;
+        }
+    </style>
+
+
+    <div class="container">
+        <h1>Timeline and Keyframes</h1>
+        <div class="timeline">
+            <div class="keyframe" style="left: 10%;"></div>
+            <div class="keyframe" style="left: 40%;"></div>
+            <div class="keyframe" style="left: 70%;"></div>
+        </div>
+        <p id="result">Keyframe selected: None</p>
+    </div>
+
+    <script>
+        const keyframes = document.querySelectorAll(".keyframe");
+        const result = document.getElementById("result");
+
+        keyframes.forEach((keyframe, index) => {
+            keyframe.addEventListener("click", () => {
+                result.textContent = `Keyframe selected: ${index + 1}`;
+            });
+        });
+    </script>
+
+
+html
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion and Effects</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .animated-element {
+            background-color: #007bff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 20px auto;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        .animated-element:hover {
+            background-color: #ff5733;
+            transform: scale(1.2);
+        }
+    </style>
+
+
+    <div class="container">
+        <h1>Motion and Effects</h1>
+        <div class="animated-element"></div>
+    </div>
+
+    <script>
+        const animatedElement = document.querySelector(".animated-element");
+
+        animatedElement.addEventListener("click", () => {
+            animatedElement.classList.toggle("animated");
+        });
+    </script>
+
+
+html
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing and Easing</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .animated-element {
+            background-color: #007bff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 20px auto;
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+        .animated-element:hover {
+            background-color: #ff5733;
+            transform: scale(1.2);
+        }
+    </style>
+
+
+    <div class="container">
+        <h1>Timing and Easing</h1>
+        <div class="animated-element"></div>
+    </div>
+
+    <script>
+        const animatedElement = document.querySelector(".animated-element");
+
+        animatedElement.addEventListener("click", () => {
+            animatedElement.classList.toggle("animated");
+        });
+    </script>
+
+</body></html>
